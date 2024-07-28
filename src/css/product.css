@@ -1,0 +1,167 @@
+/* src/App.css */
+
+/* Feature Section Styles */
+.product-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* Space between items */
+  margin: 20px 60px;
+}
+
+.product-section h1,
+.product-section p {
+  text-align: center;
+}
+
+.product-section .product-cart {
+  border: 1px solid #ebebeb;
+  padding: 13px;
+  border-radius: 25px;
+  position: relative;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  transition: box-shadow 0.2s;
+  overflow: hidden; /* Ensure content does not overflow the border-radius */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-section .product-cart:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+.product-section .product-cart img {
+  width: 100%; /* Take full width of container */
+  aspect-ratio: 3/4; /* Maintain a square aspect ratio */
+  object-fit: cover; /* Ensure image covers the area without distortion */
+  border-radius: 25px; /* Ensure image corners match the container */
+}
+
+.product-section .product-cart span {
+  color: #969696;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.product-section .product-cart h4 {
+  font-size: 18px;
+  color: rgb(41, 41, 41);
+  margin: 10px 0; /* Add margin for spacing */
+}
+
+.product-section .product-cart .stars {
+  color: #e6ae2c;
+  padding: 6px 0;
+}
+
+.product-section .product-cart .price {
+  color: #088178;
+  padding: 4px 0;
+}
+
+.product-section .product-cart .buy-icon {
+  color: #088178;
+  background-color: #c7e9e75e;
+  padding: 15px;
+  border-radius: 50px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+/* Product Details Styles */
+
+/* Product Details Styles */
+.product_head{
+  /* display: flex; */
+  justify-content: space-between;
+}
+.product-details {
+  display: flex;
+  align-items: flex-start; /* Align items at the start vertically */
+  padding: 20px;
+  margin: 20px auto;
+  border: 1px solid #ebebeb;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: 1200px; /* Adjust width as needed */
+}
+
+.product-details img {
+  width: 40%; /* Adjust width as needed */
+  height: auto;
+  aspect-ratio: 3 / 4; /* Adjust aspect ratio based on your image aspect */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px; /* Space between image and text */
+}
+
+.product-details .details {
+  flex: 1; /* Allows the details section to take up the remaining space */
+}
+
+.product-details h2 {
+  font-size: 24px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.product-details p {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.product-details h3 {
+  font-size: 20px;
+  color: #088178;
+  margin: 10px 0;
+}
+
+.product-details button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px; /* Increase font size for readability */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.product-details button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Filters Styles */
+/* Filters Container */
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center items vertically */
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+/* Filters Select Element */
+.filters select {
+  margin: 0 10px; /* Add horizontal spacing between select elements */
+  padding: 10px 15px; /* Add padding for better readability */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ddd; /* Light border color */
+  background-color: #f9f9f9; /* Slightly different background color */
+  font-size: 16px; /* Font size for better readability */
+  color: #333; /* Text color for contrast */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: border-color 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+/* Filters Select on Focus */
+.filters select:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #007bff; /* Change border color on focus */
+  background-color: #fff; /* Change background color on focus */
+}
+
