@@ -1,33 +1,44 @@
-// src/components/Header.js
-import React from 'react';
-import '@fortawesome/fontawesome-free/css/all.min.css'; // Import FontAwesome CSS
-import '../css/Navbar.css'; // Ensure you have a CSS file for styling
+import React, { useState } from 'react';
+import '../css/Navbar.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faUser, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-const Header = () => {
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <header>
-      <div id="header">
-        <div className="header-logo">
-          <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
-        </div>
-        <div className="header-list">
-          <nav className="header-list-nav">
-            <ul>
-              <li><a className="active" href="index.html">Home</a></li>
-              <li><a href="shop.html">Shop</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-          </nav>
+    <header id="header">
+      <div className="header-logo-start">
+        <Link to="/">Logo</Link>
+      </div>
+      <div className="header-list">
+        <div className={`header-list-nav ${isOpen ? 'show' : ''}`}>
+          <ul>
+            <li><Link to="/" className="nav-link">Home</Link></li>
+            <li><Link to="/about" className="nav-link">About</Link></li>
+            <li><Link to="/services" className="nav-link">Services</Link></li>
+            <li><Link to="/contact" className="nav-link">Contact</Link></li>
+          </ul>
           <div className="header-list-icon">
-            <a href="#"><i className="fa fa-bag-shopping"></i></a>
+            <Link to="/profile"><FontAwesomeIcon icon={faUser} /></Link>
+            <Link to="/cart"><FontAwesomeIcon icon={faShoppingCart} /></Link>
           </div>
         </div>
+      </div>
+      <div className="header-icon-end">
+        <Link to="/profile"><FontAwesomeIcon icon={faUser} /></Link>
+        <Link to="/cart"><FontAwesomeIcon icon={faShoppingCart} /></Link>
+      </div>
+      <div className="hamburger-menu" onClick={toggleMenu}>
+        <FontAwesomeIcon icon={faBars} />
       </div>
     </header>
   );
 };
 
-export default Header;
+export default Navbar;
