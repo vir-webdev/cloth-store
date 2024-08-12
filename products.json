@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "title": "Cartoon Astronaut T-Shirts",
+      "image": "f1.jpg",
+      "description": "A cool astronaut t-shirt",
+      "price": "$78",
+      "brand": "adidas"
+    },
+    {
+      "id": 2,
+      "title": "Cartoon Astronaut T-Shirts",
+      "image": "images/products/f2.jpg",
+      "description": "A cool astronaut t-shirt",
+      "price": "$78",
+      "brand": "adidas"
+    },
+    {
+      "id": 3,
+      "title": "Cartoon Astronaut T-Shirts",
+      "image": "images/products/f3.jpg",
+      "description": "A cool astronaut t-shirt",
+      "price": "$78",
+      "brand": "adidas"
+    }
+  ]
+  
